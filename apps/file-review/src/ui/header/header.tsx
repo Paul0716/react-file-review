@@ -1,12 +1,14 @@
 import styles from './Header.module.scss';
 import logo from '../../assets/header/icon.png';
 import search from '../../assets/header/search.png';
+import avatar from '../../assets/header/avatar.png';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {}
 
 export function Header(props: HeaderProps) {
-  console.log(styles);
+  // console.log(styles);
+  console.log(avatar);
   return (
     <header className={styles.header}>
       <div>
@@ -49,7 +51,10 @@ export function Header(props: HeaderProps) {
             </a>
           </li>
           <li>
-            <div className={styles.avator}></div>
+            <div
+              className={styles.avator}
+              style={{ backgroundImage: 'url(' + avatar + ')' }}
+            ></div>
           </li>
         </ul>
       </nav>
